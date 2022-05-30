@@ -1,21 +1,33 @@
 
-===Single row insert query on table "users"===
+===1. Single row insert query on table "users"===
 INSERT INTO user_information (username, age, phone, address) VALUES ('abusayem', '30', '01770716151', 'Gazipur, Dhaka, Bangladesh');
 
-===Multiple row insert query on table "users"===
+===2. Multiple row insert query on table "users"===
 INSERT INTO users (username, age, phone, address) VALUES
 ('abu_sayem', '25', '01723857074', 'Birganj, Dinajpur, Bangladesh'),
 ('Shihab', '30', '01946405378', 'Gulshan, Dhaka, Bangladesh'),
 ('Akash', '30', '01625897464', 'Uttara, Dhaka, Bangladesh');
 
+===3. Update query on table "users"===
+UPDATE users SET username = 'shihab_hasan', address = 'Dhanmondi, Dhaka, Bangladesh' WHERE id = 4;
+
+
+
+
+
 ===Single row insert query on table "posts"===
 INSERT INTO posts (post_title, post_details, post_file) VALUES ('Bangladesh is a Developting Country', 'Bangladesh is an Asian country. Locataed in south asia. Its very beautiful country', 'filename.jpg');
-
 
 ===Multiple row insert query on table "posts"===
 INSERT INTO posts (post_title, post_details, post_file) VALUES 
 ('Bangladesh, New Power!', 'Bangladesh is an Asian country. Locataed in south asia. Its very beautiful country', 'filename2.jpg'),
 ('The Beautiful Nation', 'Bangladesh is an Asian country. Locataed in south asia. Its very beautiful country', 'filename3.jpg');
+
+===Update query on table "posts"===
+UPDATE posts SET post_title = 'Bangladesh, The New Power!' WHERE id = 2;
+
+
+
 
 
 ===Single row insert query on table "comments"===
@@ -25,3 +37,6 @@ INSERT INTO comments (post_id, comment) VALUES ('1', 'Very good!');
 INSERT INTO comments (post_id, comment) VALUES 
 ('2', 'Very nice!'),
 ('3', 'The article is very good!');
+
+===Update query on table "comments"===
+UPDATE comments SET comment = 'Very good! Carry on.' WHERE id = 1;
